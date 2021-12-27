@@ -1,74 +1,77 @@
 package in.co.sunrays.proj4.bean;
 
 public class MarksheetBean extends BaseBean{
-	private String rollNo;
-	
-	private long studentID;
-	
-	private String name;
-	
-	private Integer physics;
-	
-	private Integer chemistry;
-	
-	private Integer maths;
+	   private String rollNo;
+	   
+	    private long studentId;
+	   
+	    private String name;
+	  
+	    private Integer physics;
+	  
+	    private Integer chemistry;
+	   
+	    private Integer maths;
 
-	public String getRollNo() {
-		return rollNo;
-	}
+	   
+	    public String getRollNo() {
+	        return rollNo;
+	    }
 
-	public void setRollNo(String rollNo) {
-		this.rollNo = rollNo;
-	}
+	    public void setRollNo(String rollNo) {
+	        this.rollNo = rollNo;
+	    }
 
-	public long getStudentID() {
-		return studentID;
-	}
+	    public String getName() {
+	        return name;
+	    }
 
-	public void setStudentID(long studentID) {
-		this.studentID = studentID;
-	}
+	    public void setName(String name) {
+	        this.name = name;
+	    }
 
-	public String getName() {
-		return name;
-	}
+	    public Integer getPhysics() {
+	        return physics;
+	    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+	    public void setPhysics(Integer physics) {
+	        this.physics = physics;
+	    }
 
-	public Integer getPhysics() {
-		return physics;
-	}
+	    public Integer getChemistry() {
+	        return chemistry;
+	    }
 
-	public void setPhysics(Integer physics) {
-		this.physics = physics;
-	}
+	    public void setChemistry(Integer chemistry) {
+	        this.chemistry = chemistry;
+	    }
 
-	public Integer getChemistry() {
-		return chemistry;
-	}
+	    public Integer getMaths() {
+	        return maths;
+	    }
 
-	public void setChemistry(Integer chemistry) {
-		this.chemistry = chemistry;
-	}
+	    public void setMaths(Integer maths) {
+	        this.maths = maths;
+	    }
 
-	public Integer getMaths() {
-		return maths;
-	}
+	    public Long getStudentId() {
+	        return studentId;
+	    }
 
-	public void setMaths(Integer maths) {
-		this.maths = maths;
-	}
+	    public void setStudentId(Long studentId) {
+	        this.studentId = studentId;
+	    }
 
+	@Override
 	public String getKey() {
 		// TODO Auto-generated method stub
-		return null;
+		 return id + "";
 	}
 
+	@Override
 	public String getValue() {
 		// TODO Auto-generated method stub
-		return null;
+		 return rollNo;
 	}
 
 }

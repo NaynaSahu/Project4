@@ -3,136 +3,164 @@ package in.co.sunrays.proj4.bean;
 import java.sql.Timestamp;
 import java.util.Date;
 
-public class UserBean extends BaseBean{
-	public static final String ACTIVE = "Active";
-	public static final String INACTIVE = "Inactive";
+public class UserBean extends BaseBean {
+	
+    public static final String ACTIVE = "Active";
+  
+    public static final String INACTIVE = "Inactive";
+   
+    private String firstName;
+   
+    private String lastName;
+    
+    private String login;
+  
+    private String password;
+   
+    private String confirmPassword;
+    
+    private Date dob;
+   
+    private String mobileNo;
+    
+    private long roleId;
+   
+    private int unSuccessfulLogin;
+   
+    private String gender;
+    
+    private Timestamp lastLogin;
+   
+    private String lock = INACTIVE;
+    
+    private String registeredIP;
+    
+    private String lastLoginIP;
 
-	private String firstName;
-	private String lastName;
-	private String login;
-	private String password;
-	private Date dob;
-	private String mobileNo;
-	private long roleId;
-	private String unSuccessfulLogin;
-	private String gender;
-	private Timestamp lastLogin;
-	private String lock = INACTIVE;
-	private String registeredIP;
-	private String lastLoginIP;
+   
+    public String getMobileNo() {
+        return mobileNo;
+    }
 
-	public String getFirstName() {
-		return firstName;
-	}
+    public void setMobileNo(String mobileNo) {
+        this.mobileNo = mobileNo;
+    }
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
+    public String getConfirmPassword() {
+        return confirmPassword;
+    }
 
-	public String getLastName() {
-		return lastName;
-	}
+    public void setConfirmPassword(String confirmPassword) {
+        this.confirmPassword = confirmPassword;
+    }
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
+    public String getLock() {
+        return lock;
+    }
 
-	public String getLogin() {
-		return login;
-	}
+    public void setLock(String lock) {
+        this.lock = lock;
+    }
 
-	public void setLogin(String login) {
-		this.login = login;
-	}
+    public String getFirstName() {
+        return firstName;
+    }
 
-	public String getPassword() {
-		return password;
-	}
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+    public String getLastName() {
+        return lastName;
+    }
 
-	public Date getDob() {
-		return dob;
-	}
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
-	public void setDob(Date dob) {
-		this.dob = dob;
-	}
+    public String getLogin() {
+        return login;
+    }
 
-	public String getMobileNo() {
-		return mobileNo;
-	}
+    public void setLogin(String login) {
+        this.login = login;
+    }
 
-	public void setMobileNo(String mobileNo) {
-		this.mobileNo = mobileNo;
-	}
+    public String getPassword() {
+        return password;
+    }
 
-	public long getRoleId() {
-		return roleId;
-	}
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
-	public void setRoleId(long roleId) {
-		this.roleId = roleId;
-	}
+    public Date getDob() {
+        return dob;
+    }
 
-	public String getUnSuccessfulLogin() {
-		return unSuccessfulLogin;
-	}
+    public void setDob(Date dob) {
+        this.dob = dob;
+    }
 
-	public void setUnSuccessfulLogin(String unSuccessfulLogin) {
-		this.unSuccessfulLogin = unSuccessfulLogin;
-	}
+    public long getRoleId() {
+        return roleId;
+    }
 
-	public String getGender() {
-		return gender;
-	}
+    public void setRoleId(long roleId) {
+        this.roleId = roleId;
+    }
 
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
+    public int getUnSuccessfulLogin() {
+        return unSuccessfulLogin;
+    }
 
-	public Timestamp getLastLogin() {
-		return lastLogin;
-	}
+    public void setUnSuccessfulLogin(int unSuccessfulLogin) {
+        this.unSuccessfulLogin = unSuccessfulLogin;
+    }
 
-	public void setLastLogin(Timestamp lastLogin) {
-		this.lastLogin = lastLogin;
-	}
+    public String getRegisteredIP() {
+        return registeredIP;
+    }
 
-	public String getLock() {
-		return lock;
-	}
+    public void setRegisteredIP(String registeredIP) {
+        this.registeredIP = registeredIP;
+    }
 
-	public void setLock(String lock) {
-		this.lock = lock;
-	}
+    public String getLastLoginIP() {
+        return lastLoginIP;
+    }
 
-	public String getRegisteredIP() {
-		return registeredIP;
-	}
+    public void setLastLoginIP(String lastLoginIP) {
+        this.lastLoginIP = lastLoginIP;
+    }
 
-	public void setRegisteredIP(String registeredIP) {
-		this.registeredIP = registeredIP;
-	}
+    public String getGender() {
+        return gender;
+    }
 
-	public String getLastLoginIP() {
-		return lastLoginIP;
-	}
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
 
-	public void setLastLoginIP(String lastLoginIP) {
-		this.lastLoginIP = lastLoginIP;
-	}
+    public Timestamp getLastLogin() {
+        return lastLogin;
+    }
 
+    public void setLastLogin(Timestamp lastLogin) {
+        this.lastLogin = lastLogin;
+    }
+
+
+	@Override
 	public String getKey() {
 		// TODO Auto-generated method stub
-		return null;
+		return id + "";
 	}
 
+	@Override
 	public String getValue() {
 		// TODO Auto-generated method stub
-		return null;
+		return firstName + " " + lastName;
 	}
 
 }

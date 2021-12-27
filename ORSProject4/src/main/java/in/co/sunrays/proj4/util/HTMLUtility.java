@@ -12,14 +12,7 @@ import in.co.sunrays.proj4.bean.DropdownListBean;
 import in.co.sunrays.proj4.model.BaseModel;
 
 public class HTMLUtility {
-	   /**
-     * Create HTML SELECT list from MAP paramters values
-     *
-     * @param name
-     * @param selectedVal
-     * @param map
-     * @return
-     */
+	 
 
     public static String getList(String name, String selectedVal,
             HashMap<String, String> map) {
@@ -43,14 +36,7 @@ public class HTMLUtility {
         return sb.toString();
     }
 
-    /**
-     * Create HTML SELECT List from List parameter
-     *
-     * @param name
-     * @param selectedVal
-     * @param list
-     * @return
-     */
+   
     public static String getList(String name, String selectedVal, List list) {
 
         Collections.sort(list);
@@ -123,12 +109,6 @@ public class HTMLUtility {
         return sb.toString();
     }
 
-    /**
-     * Returns Error Message with HTML tag and CSS
-     *
-     * @param request
-     * @return
-     */
     public static String getErrorMessage(HttpServletRequest request) {
         String msg = ServletUtility.getErrorMessage(request);
         if (!DataValidator.isNull(msg)) {
@@ -137,13 +117,7 @@ public class HTMLUtility {
         return msg;
     }
 
-    /**
-     * Returns Success Message with HTML tag and CSS
-     *
-     * @param request
-     * @return
-     */
-
+    
     public static String getSuccessMessage(HttpServletRequest request) {
         String msg = ServletUtility.getSuccessMessage(request);
         if (!DataValidator.isNull(msg)) {
@@ -152,14 +126,7 @@ public class HTMLUtility {
         return msg;
     }
 
-    /**
-     * Creates submit button if user has access permission.
-     *
-     * @param label
-     * @param access
-     * @param request
-     * @return
-     */
+  
     public static String getSubmitButton(String label, boolean access,
             HttpServletRequest request) {
 
@@ -172,24 +139,15 @@ public class HTMLUtility {
         return button;
     }
 
-    public static String getCommonFields(HttpServletRequest request) {
-
-        BaseModel model = ServletUtility.getModel(request);
-
-        StringBuffer sb = new StringBuffer();
-
-        sb.append("<input type='hidden' name='id' value=" + model.getId() + ">");
-        /*
-         * sb.append("<input type='hidden' name='createdBy' value=" +
-         * DataUtility.getString(model.getCreatedBy()) + ">");
-         * sb.append("<input type='hidden' name='modifiedBy' value=" +
-         * DataUtility.getString(model.getModifiedBy()) + ">");
-         * sb.append("<input type='hidden' name='createdDatetime' value=" +
-         * DataUtility.getTimestamp(model.getCreatedDatetime()) + ">");
-         * sb.append("<input type='hidden' name='modifiedDatetime' value=" +
-         * DataUtility.getTimestamp(model.getModifiedDatetime()) + ">");
-         */
-        return sb.toString();
-    }
-
+	/*
+	 * public static String getCommonFields(HttpServletRequest request) {
+	 * 
+	 * BaseModel model = ServletUtility.getModel(request);
+	 * 
+	 * StringBuffer sb = new StringBuffer();
+	 * 
+	 * sb.append("<input type='hidden' name='id' value=" + model.getId() + ">");
+	 * 
+	 * return sb.toString(); }
+	 */
 }

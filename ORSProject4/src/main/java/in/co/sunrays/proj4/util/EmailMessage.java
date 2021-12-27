@@ -1,7 +1,7 @@
 package in.co.sunrays.proj4.util;
 
 public class EmailMessage {
-	 /**
+	/**
      * Contains comma separated TO addresses
      */
     private String to = null;
@@ -96,6 +96,5 @@ public class EmailMessage {
         this.messageType = messageType;
     }
 
+
 }
-
-

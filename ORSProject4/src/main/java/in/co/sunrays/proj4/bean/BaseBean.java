@@ -3,16 +3,11 @@ package in.co.sunrays.proj4.bean;
 import java.io.Serializable;
 import java.sql.Timestamp;
 
-public abstract class BaseBean  implements Serializable , DropdownListBean {
-
+public abstract class BaseBean implements DropdownListBean, Serializable, Comparable<BaseBean> {
 	protected long id;
-
 	protected String createdBy;
-
 	protected String modifiedBy;
-
 	protected Timestamp createdDatetime;
-
 	protected Timestamp modifiedDatetime;
 
 	public long getId() {
@@ -54,5 +49,10 @@ public abstract class BaseBean  implements Serializable , DropdownListBean {
 	public void setModifiedDatetime(Timestamp modifiedDatetime) {
 		this.modifiedDatetime = modifiedDatetime;
 	}
-	
+
+	@Override
+	public int compareTo(BaseBean next) {
+		return getValue().compareTo(next.getValue());
+	}
+
 }

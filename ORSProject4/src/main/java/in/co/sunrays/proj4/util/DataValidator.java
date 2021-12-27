@@ -3,12 +3,7 @@ package in.co.sunrays.proj4.util;
 import java.util.Date;
 
 public class DataValidator {
-	  /**
-     * Checks if value is Null
-     *
-     * @param val
-     * @return
-     */
+	
     public static boolean isNull(String val) {
         if (val == null || val.trim().length() == 0) {
             return true;
@@ -17,22 +12,12 @@ public class DataValidator {
         }
     }
 
-    /**
-     * Checks if value is NOT Null
-     *
-     * @param val
-     * @return
-     */
+   
     public static boolean isNotNull(String val) {
         return !isNull(val);
     }
 
-    /**
-     * Checks if value is an Integer
-     *
-     * @param val
-     * @return
-     */
+    
 
     public static boolean isInteger(String val) {
 
@@ -49,12 +34,7 @@ public class DataValidator {
         }
     }
 
-    /**
-     * Checks if value is Long
-     *
-     * @param val
-     * @return
-     */
+ 
     public static boolean isLong(String val) {
         if (isNotNull(val)) {
             try {
@@ -69,12 +49,7 @@ public class DataValidator {
         }
     }
 
-    /**
-     * Checks if value is valid Email ID
-     *
-     * @param val
-     * @return
-     */
+   
     public static boolean isEmail(String val) {
 
         String emailreg = "^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
@@ -91,12 +66,6 @@ public class DataValidator {
         }
     }
 
-    /**
-     * Checks if value is Date
-     *
-     * @param val
-     * @return
-     */
     public static boolean isDate(String val) {
 
         Date d = null;
@@ -106,11 +75,6 @@ public class DataValidator {
         return d != null;
     }
 
-    /**
-     * Test above methods
-     *
-     * @param args
-     */
     public static void main(String[] args) {
 
         System.out.println("Not Null 2" + isNotNull("ABC"));
@@ -124,6 +88,3 @@ public class DataValidator {
     }
 
 }
-
-
-
