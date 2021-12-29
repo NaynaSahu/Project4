@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 <style type="text/css">
 body {
-	background-image: url('p12.jpg');
+	background-image: url('p13.jpg');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: 100% 100%;
@@ -15,22 +15,24 @@ body {
 </style>
 
 </head>
-<body><center>
+<body>
+<%@ include file="Header.jsp" %><center>
 	<table>
 		<tr>
 			<td><h1>
-					<b><i><font color="white">Think IT Think Us !</font></i></b>
+					<b><i><font color="brown">Think IT Think Us !</font></i></b>
 				</h1></td><br>
 
 
 
-			<td><a href="http://localhost:8080/WebApp2/WelcomeIndex.jsp"><h1>
-						<b><i><font color="white">Rays Tech.</font></i></b>
+			<td><a href="http://localhost:8080/ORSProject4/Welcome.jsp"><h1>
+						<b><i><font color="brown">Rays Tech.</font></i></b>
 					</h1></a></td>
 		</tr>
 	</table>
 
 
 </center>
+<%@ include file="Footer.jsp" %>
 </body>
 </html>
