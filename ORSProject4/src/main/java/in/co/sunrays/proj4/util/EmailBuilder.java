@@ -2,6 +2,10 @@ package in.co.sunrays.proj4.util;
 
 import java.util.HashMap;
 
+/**
+ * @author Nayna
+ *
+ */
 public class EmailBuilder {
 	  
     public static String getUserRegistrationMessage(HashMap<String, String> map) {

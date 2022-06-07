@@ -16,6 +16,19 @@ public class TimeTableModelTest {
 		//testDelete();
 		//testSearch();
 		//testList();
+		testFindByPK();
+	}
+
+	private static void testFindByPK() throws ApplicationException {
+		TimeTableBean bean = new TimeTableBean();
+		TimeTableModel model = new TimeTableModel();
+		bean = model.findByPK(1);
+		System.out.println(bean.getCourseId());
+		System.out.println(bean.getCourseName());
+		System.out.println(bean.getExamTime());
+		System.out.println(bean.getCreatedBy());
+		System.out.println("----------------------------------------------");
+		
 	}
 
 	public static void testAdd() throws ApplicationException, DuplicateRecordException {

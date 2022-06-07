@@ -1,11 +1,19 @@
 package in.co.sunrays.proj4.bean;
 
+
+/**
+ * @author Nayna
+ *
+ */
 public class SubjectBean extends BaseBean{
 	private long id;
 	private String subjectName;
 	private long courseId;
 	private String courseName;
 	private String description;
+	public SubjectBean() {
+		// TODO Auto-generated constructor stub
+	}
 
 	public long getId() {
 		return id;
@@ -50,13 +58,13 @@ public class SubjectBean extends BaseBean{
 	@Override
 	public String getKey() {
 		// TODO Auto-generated method stub
-		return null;
+		return id+"";
 	}
 
 	@Override
 	public String getValue() {
 		// TODO Auto-generated method stub
-		return null;
+		return subjectName;
 	}
 
 }

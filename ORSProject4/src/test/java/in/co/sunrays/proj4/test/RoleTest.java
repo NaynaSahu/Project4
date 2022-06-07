@@ -17,7 +17,8 @@ public class RoleTest {
 		// TestDelete();
 		//TestFindByName();
 		//TestSearch();
-		TestList();
+		//TestList();
+		TestFindByPk();
 	}
 
 	public static void TestList() throws ApplicationException {
@@ -112,6 +113,20 @@ public class RoleTest {
 			
 		}
 				
+	}
+	public static void TestFindByPk() throws ApplicationException{
+		RoleBean bean = new RoleBean();
+		RoleModel model = new RoleModel();
+		bean = model.findByPK(1);
+		System.out.println(bean.getId());
+		System.out.println(bean.getName());
+		System.out.println(bean.getDescription());
+		System.out.println(bean.getCreatedBy());
+		System.out.println(bean.getModifiedBy());
+		System.out.println(bean.getCreatedDatetime());
+		System.out.println(bean.getModifiedDatetime());
+
+		
 	}
 
 }

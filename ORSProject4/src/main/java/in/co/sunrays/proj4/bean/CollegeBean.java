@@ -1,16 +1,20 @@
 package in.co.sunrays.proj4.bean;
 
+/**
+ * @author Nayna
+ *
+ */
 public class CollegeBean extends BaseBean{
 	  
     private String name;
-   
     private String address;
-   
     private String state;
-   
     private String city;
-   
     private String phoneNo;
+
+    public CollegeBean() {
+		// TODO Auto-generated constructor stub
+	}
 
   
     public String getName() {

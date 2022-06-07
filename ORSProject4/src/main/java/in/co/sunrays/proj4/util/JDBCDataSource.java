@@ -9,7 +9,13 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
 import java.sql.Connection;
 
 
+
+/**
+ * @author Nayna
+ *
+ */
 public final class JDBCDataSource {
+	
 	private static JDBCDataSource datasource = null;
 	private ComboPooledDataSource cpds = null;
 	ResourceBundle rb = ResourceBundle.getBundle("in.co.sunrays.proj4.bundle.system");

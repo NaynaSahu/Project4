@@ -12,11 +12,12 @@ import in.co.sunrays.proj4.model.CollegeModel;
 public class CollegeModelTest {
 	public static void main(String[] args) throws ApplicationException, DuplicateRecordException {
 		//TestAdd();
-		//TestUpdate();
+		TestUpdate();
 		//TestDelete();
 		//TestSearch();
 		//TestFindByPk();
-		TestFindByFname();
+		//TestFindByFname();
+		//TestList();
 		
 	}
 	private static void TestFindByFname() throws ApplicationException {
@@ -69,10 +70,23 @@ public class CollegeModelTest {
 			System.out.println(".............................");
 			
 		}
-		 
+			
+	}
+	public static void TestList() throws ApplicationException {
+		CollegeModel model =new CollegeModel();
+		CollegeBean bean = new CollegeBean();
 		
-	
-		
+		List list = model.list();
+		Iterator<CollegeBean> it = list.iterator();
+		while(it.hasNext()) {
+			CollegeBean bean1 = (CollegeBean) it.next();
+			System.out.println(bean1.getAddress());
+			System.out.println(bean1.getCity());
+			System.out.println(bean1.getName());
+			System.out.println(bean1.getPhoneNo());
+			System.out.println("-------------------------------------------------------------");
+			
+		}
 	}
 	public static void TestDelete() throws ApplicationException {
 		CollegeBean bean = new CollegeBean();
@@ -86,12 +100,8 @@ public class CollegeModelTest {
 	private static void TestUpdate() throws ApplicationException, DuplicateRecordException {
 		CollegeBean bean = new CollegeBean();
 		CollegeModel model = new CollegeModel();
-		bean.setAddress("202 B ratan bagh");
 		bean.setId(1);
-		bean.setCity("Indore");
-		bean.setName("Nayna");
 		bean.setPhoneNo("8720027764");
-		bean.setState("M.P");
 		bean.setCreatedBy("Admin");
 		model.update(bean);
 		

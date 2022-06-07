@@ -4,6 +4,10 @@ import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * @author Nayna
+ *
+ */
 public class DataUtility {
     
     public static final String APP_DATE_FORMAT = "MM/dd/yyyy";
@@ -117,7 +121,7 @@ public class DataUtility {
     }
 
     public static void main(String[] args) {
-        System.out.println(getInt("124"));
+        System.out.println(getInt("1234"));
     }
 
 }

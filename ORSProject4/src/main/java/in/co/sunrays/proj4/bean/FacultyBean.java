@@ -2,6 +2,10 @@ package in.co.sunrays.proj4.bean;
 
 import java.util.Date;
 
+/**
+ * @author Nayna
+ *
+ */
 public class FacultyBean extends BaseBean {
 	private long id;
 	private String firstName;
@@ -17,6 +21,9 @@ public class FacultyBean extends BaseBean {
 	private String courseName;
 	private long subjectId;
 	private String subjectName;
+	public FacultyBean() {
+		// TODO Auto-generated constructor stub
+	}
 
 
 	public long getId() {
@@ -134,13 +141,13 @@ public class FacultyBean extends BaseBean {
 	@Override
 	public String getKey() {
 		// TODO Auto-generated method stub
-		return null;
+		return id + "";
 	}
 
 	@Override
 	public String getValue() {
 		// TODO Auto-generated method stub
-		return null;
+		return firstName;
 	}
 
 }

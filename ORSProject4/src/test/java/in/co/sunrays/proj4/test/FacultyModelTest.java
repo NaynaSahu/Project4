@@ -12,10 +12,10 @@ import in.co.sunrays.proj4.model.FacultyModel;
 public class FacultyModelTest {
 	public static void main(String[] args) throws ApplicationException, DuplicateRecordException {
 		//testAdd();
-		testDelete();
+		//testDelete();
 		//testUpdate();
 		//testList();
-		//testSearch();
+		testSearch();
 		
 	}
 
@@ -92,7 +92,7 @@ public class FacultyModelTest {
 			System.out.println(bean1.getFirstName());
 			System.out.println(bean1.getLastName());
 			System.out.println(bean1.getCollegeName());
-			System.out.println(bean1.getCourseName());
+			System.out.println(bean1.getCourseName());// is null
 			System.out.println(bean1.getEmail());
 			System.out.println(bean1.getGender());
 			System.out.println(bean1.getMobileNo());

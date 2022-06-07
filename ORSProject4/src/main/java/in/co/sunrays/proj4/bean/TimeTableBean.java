@@ -2,6 +2,11 @@ package in.co.sunrays.proj4.bean;
 
 import java.util.Date;
 
+
+/**
+ * @author Nayna
+ *
+ */
 public class TimeTableBean extends BaseBean {
 	private long id;
 	private String courseName;
@@ -9,11 +14,11 @@ public class TimeTableBean extends BaseBean {
 	private String subjectName;
 	private long subjectId;
 	private Date examDate;
-	private Date examTime;
+	private String examTime;
 	private String semester;
-	
-	
-
+	public TimeTableBean() {
+		// TODO Auto-generated constructor stub
+	}
 	public long getId() {
 		return id;
 	}
@@ -62,11 +67,11 @@ public class TimeTableBean extends BaseBean {
 		this.examDate = examDate;
 	}
 
-	public Date getExamTime() {
+	public String getExamTime() {
 		return examTime;
 	}
 
-	public void setExamTime(Date examTime) {
+	public void setExamTime(String examTime) {
 		this.examTime = examTime;
 	}
 
@@ -81,13 +86,13 @@ public class TimeTableBean extends BaseBean {
 	@Override
 	public String getKey() {
 		// TODO Auto-generated method stub
-		return null;
+		return id+"";
 	}
 
 	@Override
 	public String getValue() {
 		// TODO Auto-generated method stub
-		return null;
+		return courseName;
 	}
 	
 

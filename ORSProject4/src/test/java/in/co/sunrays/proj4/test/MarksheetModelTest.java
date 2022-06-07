@@ -5,8 +5,10 @@ import java.util.Iterator;
 import java.util.List;
 
 import in.co.sunrays.proj4.bean.MarksheetBean;
+import in.co.sunrays.proj4.bean.MarksheetBean;
 import in.co.sunrays.proj4.exception.ApplicationException;
 import in.co.sunrays.proj4.exception.DuplicateRecordException;
+import in.co.sunrays.proj4.model.MarksheetModel;
 import in.co.sunrays.proj4.model.MarksheetModel;
 
 public class MarksheetModelTest {
@@ -16,6 +18,20 @@ public class MarksheetModelTest {
 		//TestDelete();
 		//TestSearch();
 		//TestList();
+		//TestFindByPk();
+	}
+	private static void TestFindByPk() throws ApplicationException {
+		MarksheetBean bean = new MarksheetBean();
+		MarksheetModel model =new MarksheetModel();
+		bean = model.findByPK(2);
+		System.out.println(bean.getName());
+		System.out.println(bean.getChemistry());
+		System.out.println(bean.getMaths());
+		
+		System.out.println(".............................");
+		
+		
+		
 	}
 	public static void TestList() throws ApplicationException {
 	MarksheetBean bean = new MarksheetBean();
@@ -85,14 +101,14 @@ public class MarksheetModelTest {
 	public static void TestAdd() throws ApplicationException, DuplicateRecordException {
 		MarksheetBean bean = new MarksheetBean();
 		MarksheetModel model = new MarksheetModel();
-		bean.setChemistry(5);
-		bean.setMaths(1);
+		bean.setChemistry(56);
+		bean.setMaths(00);
 		bean.setCreatedBy("bhagvan2");
-		bean.setPhysics(0);
+		bean.setPhysics(1);
 		bean.setModifiedBy("bhagvan3");
-		bean.setRollNo("101");
-		bean.setName("Nayna");
-		bean.setStudentId(1l);
+		bean.setRollNo("103");
+		bean.setName("Ishika");
+		bean.setStudentId(2l);
 		
 		model.add(bean);
 		

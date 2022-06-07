@@ -1,18 +1,25 @@
 package in.co.sunrays.proj4.bean;
 
+/**
+ * @author Nayna
+ *
+ */
 public class CourseBean extends BaseBean{
 	
-	private long id ;
 	private String courseName ;
 	private String description;
+	private String duration;
+	public CourseBean() {
+		// TODO Auto-generated constructor stub
+	}
 	
 
-	public long getId() {
-		return id;
+	public String getDuration() {
+		return duration;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setDuration(String duration) {
+		this.duration = duration;
 	}
 
 	public String getCourseName() {
@@ -34,13 +41,13 @@ public class CourseBean extends BaseBean{
 	@Override
 	public String getKey() {
 		// TODO Auto-generated method stub
-		return null;
+		return id+"";
 	}
 
 	@Override
 	public String getValue() {
 		// TODO Auto-generated method stub
-		return null;
+		return courseName;
 	}
 	
 

@@ -10,10 +10,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import in.co.sunrays.proj4.bean.BaseBean;
-import in.co.sunrays.proj4.model.AppRole;
-import in.co.sunrays.proj4.model.BaseModel;
 import in.co.sunrays.proj4.model.UserModel;
+import in.co.sunrays.proj4.servlet.BaseCtl;
+import in.co.sunrays.proj4.servlet.ORSView;
 
+
+
+/**
+ * @author Nayna
+ *
+ */
 public class ServletUtility {
 	
     public static void forward(String page, HttpServletRequest request,
@@ -114,9 +120,10 @@ public class ServletUtility {
         }
     }
 
-    public static void setModel(BaseModel model, HttpServletRequest request) {
-        request.setAttribute("model", model);
-    }
+	/*
+	 * public static void setModel(BaseModel model, HttpServletRequest request) {
+	 * request.setAttribute("model", model); }
+	 */
 
    
     public static void setBean(BaseBean bean, HttpServletRequest request) {
@@ -139,19 +146,17 @@ public class ServletUtility {
     }
 
    
-    public static long getRole(HttpServletRequest request) {
-        UserModel model = (UserModel) request.getSession().getAttribute("user");
-        if (model != null) {
-            return model.getRoleId();
-        } else {
-            return AppRole.GUEST;
-        }
-    }
+	/*
+	 * public static long getRole(HttpServletRequest request) { UserModel model =
+	 * (UserModel) request.getSession().getAttribute("user"); if (model != null) {
+	 * return model.getRoleId(); } else { return AppRole.GUEST; } }
+	 */
 
    
-    public static BaseModel getModel(HttpServletRequest request) {
-        return (BaseModel) request.getAttribute("model");
-    }
+	/*
+	 * public static BaseModel getModel(HttpServletRequest request) { return
+	 * (BaseModel) request.getAttribute("model"); }
+	 */
 
    
 

@@ -3,153 +3,119 @@ package in.co.sunrays.proj4.bean;
 import java.sql.Timestamp;
 import java.util.Date;
 
+
+/**
+ * @author Nayna
+ *
+ */
 public class UserBean extends BaseBean {
-	
-    public static final String ACTIVE = "Active";
-  
-    public static final String INACTIVE = "Inactive";
-   
-    private String firstName;
-   
-    private String lastName;
-    
-    private String login;
-  
-    private String password;
-   
-    private String confirmPassword;
-    
-    private Date dob;
-   
-    private String mobileNo;
-    
-    private long roleId;
-   
-    private int unSuccessfulLogin;
-   
-    private String gender;
-    
-    private Timestamp lastLogin;
-   
+
+	public static final String ACTIVE = "Active";
+	public static final String INACTIVE = "Inactive";
+
+	private String firstName;
+	private String lastName;
+	private String login;
+	private String password;
+	private String confirmPassword;
+	private Date dob;
+	private String mobileNo;
+	private long roleId;
     private String lock = INACTIVE;
-    
-    private String registeredIP;
-    
-    private String lastLoginIP;
+	private String gender;
 
-   
-    public String getMobileNo() {
-        return mobileNo;
-    }
 
-    public void setMobileNo(String mobileNo) {
-        this.mobileNo = mobileNo;
-    }
 
-    public String getConfirmPassword() {
-        return confirmPassword;
-    }
+	public String getLock() {
+		return lock;
+	}
 
-    public void setConfirmPassword(String confirmPassword) {
-        this.confirmPassword = confirmPassword;
-    }
+	public void setLock(String lock) {
+		this.lock = lock;
+	}
 
-    public String getLock() {
-        return lock;
-    }
+	public UserBean() {
+		// TODO Auto-generated constructor stub
+	}
 
-    public void setLock(String lock) {
-        this.lock = lock;
-    }
+	public String getMobileNo() {
+		return mobileNo;
+	}
 
-    public String getFirstName() {
-        return firstName;
-    }
+	public void setMobileNo(String mobileNo) {
+		this.mobileNo = mobileNo;
+	}
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+	public String getConfirmPassword() {
+		return confirmPassword;
+	}
 
-    public String getLastName() {
-        return lastName;
-    }
+	public void setConfirmPassword(String confirmPassword) {
+		this.confirmPassword = confirmPassword;
+	}
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
 
-    public String getLogin() {
-        return login;
-    }
 
-    public void setLogin(String login) {
-        this.login = login;
-    }
+	public String getFirstName() {
+		return firstName;
+	}
 
-    public String getPassword() {
-        return password;
-    }
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+	public String getLastName() {
+		return lastName;
+	}
 
-    public Date getDob() {
-        return dob;
-    }
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
 
-    public void setDob(Date dob) {
-        this.dob = dob;
-    }
+	public String getLogin() {
+		return login;
+	}
 
-    public long getRoleId() {
-        return roleId;
-    }
+	public void setLogin(String login) {
+		this.login = login;
+	}
 
-    public void setRoleId(long roleId) {
-        this.roleId = roleId;
-    }
+	public String getPassword() {
+		return password;
+	}
 
-    public int getUnSuccessfulLogin() {
-        return unSuccessfulLogin;
-    }
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
-    public void setUnSuccessfulLogin(int unSuccessfulLogin) {
-        this.unSuccessfulLogin = unSuccessfulLogin;
-    }
+	public Date getDob() {
+		return dob;
+	}
 
-    public String getRegisteredIP() {
-        return registeredIP;
-    }
+	public void setDob(Date dob) {
+		this.dob = dob;
+	}
 
-    public void setRegisteredIP(String registeredIP) {
-        this.registeredIP = registeredIP;
-    }
+	public long getRoleId() {
+		return roleId;
+	}
 
-    public String getLastLoginIP() {
-        return lastLoginIP;
-    }
+	public void setRoleId(long roleId) {
+		this.roleId = roleId;
+	}
 
-    public void setLastLoginIP(String lastLoginIP) {
-        this.lastLoginIP = lastLoginIP;
-    }
+	public String getGender() {
+		return gender;
+	}
 
-    public String getGender() {
-        return gender;
-    }
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
 
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public Timestamp getLastLogin() {
-        return lastLogin;
-    }
-
-    public void setLastLogin(Timestamp lastLogin) {
-        this.lastLogin = lastLogin;
-    }
-
+	/*
+	 * public int getUnSuccessfulLogin() { // TODO Auto-generated method stub return
+	 * 0; }
+	 */
 
 	@Override
 	public String getKey() {
@@ -160,7 +126,7 @@ public class UserBean extends BaseBean {
 	@Override
 	public String getValue() {
 		// TODO Auto-generated method stub
-		return firstName + " " + lastName;
+		return login;
 	}
 
 }

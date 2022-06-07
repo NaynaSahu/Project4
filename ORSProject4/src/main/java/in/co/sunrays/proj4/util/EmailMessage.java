@@ -1,5 +1,9 @@
 package in.co.sunrays.proj4.util;
 
+/**
+ * @author Nayna
+ *
+ */
 public class EmailMessage {
 	/**
      * Contains comma separated TO addresses

@@ -3,12 +3,19 @@ package in.co.sunrays.proj4.bean;
 import java.io.Serializable;
 import java.sql.Timestamp;
 
+/**
+ * @author Nayna
+ *
+ */
 public abstract class BaseBean implements DropdownListBean, Serializable, Comparable<BaseBean> {
 	protected long id;
 	protected String createdBy;
 	protected String modifiedBy;
 	protected Timestamp createdDatetime;
 	protected Timestamp modifiedDatetime;
+	public BaseBean() {
+		// TODO Auto-generated constructor stub
+	}
 
 	public long getId() {
 		return id;

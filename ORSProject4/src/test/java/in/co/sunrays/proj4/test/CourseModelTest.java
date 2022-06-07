@@ -15,7 +15,8 @@ public class CourseModelTest {
 		// testUpdate();
 		// testDelete();
 		//testSearch();
-		 testList();
+		// testList();
+		TestFindByPK();
 	}
 
 	public static void testList() throws ApplicationException {
@@ -34,6 +35,18 @@ public class CourseModelTest {
 		}
 		
 
+	} 
+	public static void TestFindByPK() throws ApplicationException {
+		CourseBean bean = new CourseBean();
+		CourseModel model = new CourseModel();
+		bean = model.findByPK(1);
+		System.out.println(bean.getCourseName());
+		System.out.println(bean.getDescription());
+		System.out.println(bean.getDuration());
+		System.out.println(bean.getCreatedBy());
+		System.out.println(bean.getId());
+		
+		
 	}
 
 	public static void testSearch() throws ApplicationException {

@@ -11,11 +11,12 @@ import in.co.sunrays.proj4.model.SubjectModel;
 
 public class SubjectModelTest {
 	public static void main(String[] args) throws ApplicationException, DuplicateRecordException {
-		//testAdd();
+		testAdd();
 		//testDelete();
 		//testUpdate();
 		//testSearch();
 		//testList();
+		//TestFindByPK();
 	}
 
 	public static void testList() throws ApplicationException {
@@ -58,6 +59,15 @@ public class SubjectModelTest {
 		
 		
 		
+	}
+	public static void TestFindByPK() throws ApplicationException {
+		SubjectModel model = new SubjectModel();
+		SubjectBean bean = new SubjectBean();
+		bean = model.findByPK(1);
+		System.out.println(bean.getCourseId());
+		System.out.println(bean.getCourseName());
+		System.out.println(bean.getDescription());
+		System.out.println(bean.getSubjectName());
 	}
 
 	public static void testUpdate() throws ApplicationException, DuplicateRecordException {
