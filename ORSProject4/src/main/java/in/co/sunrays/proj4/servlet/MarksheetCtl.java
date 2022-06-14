@@ -147,7 +147,7 @@ public class MarksheetCtl extends BaseCtl {
 
 		MarksheetModel model = new MarksheetModel();
 
-		StudentModel mod = new StudentModel();
+		//StudentModel mod = new StudentModel();
 		/*
 		 * List lis = null; try { lis = mod.list(); } catch (ApplicationException e1) {
 		 * // TODO Auto-generated catch block e1.printStackTrace(); }
@@ -210,7 +210,7 @@ public class MarksheetCtl extends BaseCtl {
 			} catch (DuplicateRecordException e) {
 				e.printStackTrace();
 				ServletUtility.setBean(bean, request);
-				ServletUtility.setErrorMessage("Rollno is already exist", request);
+				ServletUtility.setErrorMessage("Rollno already exist", request);
 
 			}
 		} else if (OP_RESET.equalsIgnoreCase(op)) {

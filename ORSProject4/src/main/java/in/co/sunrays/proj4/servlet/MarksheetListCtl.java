@@ -49,8 +49,11 @@ public class MarksheetListCtl extends BaseCtl {
 
 		////	System.out.println("marksheet list ctl populate start");
 
-			bean.setId(DataUtility.getLong(request.getParameter("rollNo")));
-			bean.setName(DataUtility.getString(request.getParameter("name")));
+		bean.setId(DataUtility.getLong(request.getParameter("rollNo")));
+		bean.setName(DataUtility.getString(request.getParameter("name")));
+		//bean.setResult(DataUtility.getString(request.getParameter("result")));
+		
+//		bean.setId(DataUtility.getLong(request.getParameter("rollNo")));
 
 			//System.out.println("marksheet list ctl populate end");
 
