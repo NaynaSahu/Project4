@@ -66,6 +66,7 @@
 				<tr>
 					<th><input type="checkbox" id="select_all" name="select">Select
 						All</th>
+						<th>S.No.</th> 
 					<th>First Name</th>
 					<th>Last Name</th>
 					<th>Login Id</th>
@@ -78,7 +79,7 @@
 
 				<%
 					while (it.hasNext()) {
-							UserBean ben = it.next();
+							 bean = it.next();
 							RoleModel rm = new RoleModel();
 							RoleBean rb = new RoleBean();
 							
@@ -86,41 +87,42 @@
 				%>
 				<tr align="center">
 					<td><input type="checkbox" class="checkbox" name="ids"
-						value="<%=ben.getId()%>" <%if (ben.getRoleId() == 1) {%>
+						value="<%=bean.getId()%>" <%if (bean.getRoleId() == 1) {%>
 						disabled="disabled" <%}%>></td>
-					<td><%=ben.getFirstName()%></td>
-					<td><%=ben.getLastName()%></td>
-					<td><%=ben.getLogin()%></td>
+						<td> <%= index++ %> </td> 
+					<td><%=bean.getFirstName()%></td>
+					<td><%=bean.getLastName()%></td>
+					<td><%=bean.getLogin()%></td>
 					<%
-						if (ben.getRoleId() == 1) {
+						if (bean.getRoleId() == 1) {
 					%><td>Admin</td>
 					<%
-						} else if (ben.getRoleId() == 2) {
+						} else if (bean.getRoleId() == 2) {
 					%><td>Student</td>
 					<%
-						} else if (ben.getRoleId() == 3) {
+						} else if (bean.getRoleId() == 3) {
 					%><td>College</td>
 					<%
-						} else if (ben.getRoleId() == 4) {
+						} else if (bean.getRoleId() == 4) {
 					%><td>Kiosk</td>
 					<%
-						}else if (ben.getRoleId() == 5) {
+						}else if (bean.getRoleId() == 5) {
 					%><td>Faculty</td>
 					<%
 					}
 					%>
 					
-					<td><%=ben.getGender()%></td>
-					<td><%=ben.getDob()%></td>
+					<td><%=bean.getGender()%></td>
+					<td><%=bean.getDob()%></td>
 					<%
-						if (ben.getRoleId() == 1) {
+						if (bean.getRoleId() == 1) {
 					%>
-					<td><a href="UserCtl?id=<%=ben.getId()%>"
+					<td><a href="UserCtl?id=<%=bean.getId()%>"
 						onclick="return false;">Edit</a></td>
 					<%
 						} else {
 					%>
-					<td><a href="UserCtl?id=<%=ben.getId()%>">Edit</a></td>
+					<td><a href="UserCtl?id=<%=bean.getId()%>">Edit</a></td>
 					<%
 						}
 					%>
@@ -153,7 +155,7 @@
 
 					<%
 						UserModel model = new UserModel();
-							if (list.size() < pageSize || model.nextPK() - 1 == bean.getId()) {
+							if (list.size() < pageSize || model.nextPK() - 1 == bean.getId() ) {
 					%><td align="right"><input type="submit" name="operation"
 						disabled="disabled" value="<%=UserListCtl.OP_NEXT%>"></td>
 					<%
